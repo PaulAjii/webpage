@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<title>Counter JS</title>
+				<style>
+body {
+     display: flex;
+			background-image: url("https://i.postimg.cc/3wCx5yzF/IMG-20210711-221711-850.jpg");
+			width: 100%;
+			height: 100vh;
+			justify-content: center;
+			align-items: center;
+			
+	}
+h1 {
+			color: white;
+			margin-bottom: 50px;
+			margin-top: 30px;
+			font-size: 50px;
+			font-family: Montserrat, sans-serif;
+}
+#number {
+				font-size: 160px;
+				color: green;
+				margin: 50px 45px;
+}
+.container {
+				text-align: center;
+				border: 3px solid white;
+				margin: 2px;
+				margin-bottom: 0px;
+				padding: 10px;
+				height: 80%;
+				width: 70%;
+				background-image: url("https://i.postimg.cc/3wCx5yzF/IMG-20210711-221711-850.jpg");
+}
+button {
+				border: none;
+				border-radius: 5px;
+				margin: 15px;
+				padding: 10px;
+				background: navy;
+				color: white;
+	  		cursor: pointer;
+}
+button:focus{
+				background: white;
+				color: navy;
+				border: 2px solid navy;
+				font-weight: bold;
+}
+				</style>
+</head>
+<body>
+		<div class="container">
+			<h1>COUNTER</h1>
+			<div id="number">0</div>
+			<div id="button1">
+					<button id="lowercount">
+									LOWER COUNT
+					</button>
+			</div>
+			<div id="button2">
+					<button id="addcount">
+									ADD COUNT
+					</button>
+			</div>
+		</div>
+	
+		<script>
+						
+						const number = document.getElementById("number");
+						const lowct = document.getElementById("lowercount");
+						const addct = document.getElementById("addcount");
+						
+					let numberValue = 0;
+						lowct.addEventListener('click', function() {if(numberValue > 0) {
+										numberValue --;
+						} number.innerHTML = numberValue;
+						}) 
+						
+						addct.addEventListener('click', function() {if(numberValue < 50) {
+										numberValue ++;
+						}
+						number.innerText = numberValue;
+										})
+					
+		</script>
+</body>
+</html>
